@@ -7,8 +7,8 @@ cache:
     - $HOME/.m2
 
 before_install:
-  - echo ${name}
-  - echo ${currentVersion}
+  - echo $name
+  - echo $currentVersion
   - mvn compile
 
 script:
