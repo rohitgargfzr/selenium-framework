@@ -1,14 +1,14 @@
 sudo: required
 language: java
 services:
-  - dockerad
+  - dockerad ocm
 
 before_install:
-  - echo $HOME
+  - echo $projectName
   - echo $currentVersion
   - mvn compile
 
 script:
   - ./mvnw spring-boot:build-image
-  - docker run -it $name:$currentVersion
+  - docker run -it $projectName:$currentVersion
 

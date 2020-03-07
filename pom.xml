@@ -15,8 +15,6 @@
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
-		<currentVersion>{project.version}</currentVersion>
-		<name>{project.artifactId}</name>
 		<java.version>1.8</java.version>
 		<selenium.version>4.0.0-alpha-4</selenium.version>
 		<lombok.version>1.18.12</lombok.version>
@@ -81,6 +79,17 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.0.0-M4</version>
+				<configuration>
+					<systemPropertyVariables>
+						<projectName>${project.artifactId}</projectName>
+						<currentVersion>${project.version}</currentVersion>
+					</systemPropertyVariables>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
