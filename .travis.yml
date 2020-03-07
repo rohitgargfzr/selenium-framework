@@ -1,13 +1,10 @@
 sudo: required
 language: java
 services:
-  - docker
-cache:
-  directories:
-    - $HOME/.m2
+  - dockerad
 
 before_install:
-  - echo $name
+  - echo $HOME
   - echo $currentVersion
   - mvn compile
 
