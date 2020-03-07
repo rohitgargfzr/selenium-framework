@@ -15,6 +15,8 @@
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
+		<currentVersion>{project.version}</currentVersion>
+		<name>{project.artifactId}</name>
 		<java.version>1.8</java.version>
 		<selenium.version>4.0.0-alpha-4</selenium.version>
 		<lombok.version>1.18.12</lombok.version>

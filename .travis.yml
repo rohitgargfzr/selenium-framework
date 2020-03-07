@@ -2,6 +2,14 @@ sudo: required
 language: java
 services:
   - docker
+cache:
+  directories:
+    - $HOME/.m2
 
 before_install:
+  - mvn compile
+
+script:
   - ./mvnw spring-boot:build-image
+  - docker run -it $name:$currentVersion
+
