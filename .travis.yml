@@ -10,5 +10,5 @@ before_install:
 
 script:
   - ./mvnw spring-boot:build-image
-  - docker run -it $projectName:$currentVersion
+  - docker run -it tester:0.0.1-SNAPSHOT
 
